@@ -1,4 +1,5 @@
 import discord
+import os
 import discord as ds
 from discord import app_commands
 from discord import utils
@@ -7,8 +8,7 @@ from economy import update, delete, get_coin, insert
 from datetime import datetime
 
 # Load the bot token
-with open("token.txt", "r") as f:
-    token = f.read()
+token = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
