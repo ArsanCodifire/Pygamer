@@ -178,7 +178,7 @@ async def account(interaction: discord.Interaction):
         "username": user.name,
         "pycoin": coin
         }
-    emb=ds.Embed(title=user_data["username"], description=f"No of Pycoins: <:pycoin:1309160887587831949>{user_data[f"pycoin"]} pycoins", color=embed_color)
+    emb=ds.Embed(title=user_data["username"], description=f"No of Pycoins: <:pycoin:1309160887587831949>{user_data['pycoin']} pycoins", color=embed_color)
     if sts=="acc":
         await interaction.response.send_message(embed=emb)
     else:
