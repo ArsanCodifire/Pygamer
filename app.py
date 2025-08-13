@@ -6,7 +6,9 @@ from discord import utils
 import asyncio, random
 from economy import update, delete, get_coin, insert
 from datetime import datetime
+from keep_alive import keep_alive
 
+keep_alive()
 # Load the bot token
 token = os.getenv("DISCORD_TOKEN")
 
